@@ -54,14 +54,14 @@ There are also not so good (my opinion) reasons:
 * Tools available for this language
     * Analyzers
     * IDEs
-    * 
+    * Libraries
+    * Frameworks
+    * Standard library functions
 * Compiler
-* Libraries
+    * Speed
+    * Optimizations
 * Userbase
-* primitives
-
-
-Optimizations
+* Language Primitives
 
 I am not saying, it is wrong to choose a language by any of the second set of points.
 However, I propose that these point do not have to / should not influence the choice of language.
