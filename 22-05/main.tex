@@ -1,0 +1,308 @@
+%-------------------------------------------------------------
+\documentclass[aspectratio=169, handout]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+
+\usepackage{latexsym,xcolor,multicol,booktabs,calligra}
+\usepackage{amsmath,amssymb,BOONDOX-cal,bm}	
+\usepackage{graphicx,pstricks,stackengine}    
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{listings}
+\usepackage{etoolbox}
+\usepackage{tablefootnote}
+\usepackage{ bbold }
+\usepackage{tikz}
+\usepackage{xfrac}
+\usepackage{longtable}  
+
+
+\author{Marcel Ullrich}
+%\titlegraphic{\includegraphics[width=\textwidth]{unilogo4cmittel.jpg}}
+\titlegraphic{ 
+\begin{tikzpicture}[overlay,remember picture]
+\node[right=-0.15cm] at (current page.154){%150 vorher
+    \includegraphics[width=1.2\textwidth]{unilogo4c.png}
+};
+\end{tikzpicture}
+}
+\title{\textbf{U}niversal \textbf{L}anguage \textbf{Tra}nspiler} % Esperanto
+\institute{Saarland University } 
+\date{02.05.2022}
+%\logo{\includegraphics[width=0.12\textwidth]{MessmapLogo.png}}
+
+\usepackage{Wue}
+
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+
+\newtheorem{thm}{Theorem}[theorem]
+
+
+%—-------------------------------------------------------------
+
+\begin{document}
+	\begin{frame}
+    \titlepage
+    \end{frame}
+    
+    % \section{ABC}
+    
+    \begin{frame}{Problem}
+    \begin{itemize}
+        \item Migration from scripting to programming \pause %https://dl.acm.org/doi/abs/10.1145/1176617.1176755?casa_token=dFMn2xhiTeUAAAAA:EC0wkfDgt3clgpbnwQ1x2JasOiL9wOvZQ0HoxKdUNexgjpAznzLg4tpfJpfDyXp0MIYzBHeE58tS
+        %https://dl.acm.org/doi/abs/10.1145/103135.103138
+        \item Rewriting of code \pause
+        \item Interface changes
+    \end{itemize}
+    \only<4->{
+    \begin{center}
+    \alt<6>{
+    \includegraphics[width=.5\textwidth]{imgs/standards3.png}%
+    }{
+    \alt<5>{
+    \includegraphics[width=.5\textwidth]{imgs/standards2.png}%
+    }{
+    \includegraphics[width=.5\textwidth]{imgs/standards.png}
+    }
+    }
+    %3145 esoterische PL
+    
+    { \tiny \url{https://xkcd.com/927/} \visible<5->{(modified)}}
+    \end{center}
+    }
+    \end{frame}
+    
+    \begin{frame}{Goal}
+    \begin{itemize}
+        \item translation of code \pause
+        \item language agnostic \pause
+        \item minimal boilerplate \pause
+        \item readable
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Classification}
+    \begin{itemize}
+        \item {\color<2>{gray}Machine languages}
+        \item {\color<2>{gray}Assembly languages}
+        \item High-level languages
+        \item Scripting languages
+        \item System languages
+        \item Domain-specific languages
+        \item {\color<2>{gray}Visual languages}
+        \item {\color<2>{gray}Esoteric languages}
+        \item {\color<2>{gray}other}
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{High-level languages}
+    \begin{itemize}
+        \item imperative
+        \item functional
+        \item {\color<2>{gray}declarative}
+        \item {\color<2>{gray}array}
+        \item constraint
+        \item {\color<2>{gray}other}
+    \end{itemize}
+   
+    \end{frame}
+    
+    \begin{frame}{Examples}
+     %https://cs.lmu.edu/~ray/notes/pltypes/
+     \begin{itemize}
+         \item \href{https://rosettacode.org/wiki/Mandelbrot_set}{Mandelbrot}
+         \item \url{https://cs.lmu.edu/~ray/notes/pltypes/}
+     \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Issues}
+    \begin{itemize}
+        \item large difference between languages \pause % compiled interpreted, typed untypes
+        \item boilerplate around differences\pause 
+        \item language specific features\pause  %e.g. metaprogramming
+        \item correct code generation\pause 
+        \item interaction with the user
+        \item scaling
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Ideas}
+    \begin{itemize}
+    \item concept:
+    \begin{itemize}
+        \item transpiler generator
+        \item transpiler that generates
+    \end{itemize} \pause
+    \item approach:
+    \begin{itemize}
+        \item structure based
+        \item partial evaluation
+        \item translation
+        \item synthesis
+        \item + validation
+        \item common language
+    \end{itemize}
+    \end{itemize}
+    \end{frame}
+    
+    % TODO
+    
+    % https://emina.github.io/rosette/
+    % https://docs.racket-lang.org/rosette-guide/index.html
+    % https://github.com/google-research/crossbeam
+    % https://github.com/jarble/transpiler
+    
+    \begin{frame}{Concept: Transpiler generator}
+    \begin{itemize}
+        \item general language independent framework
+        \item translation rules per language 
+        \item need synthesis of rules \pause
+        \item advantages:
+            \begin{itemize}
+                \item modular
+                \item well suited for very similar languages
+            \end{itemize} \pause
+        \item disadvantages: 
+            \begin{itemize}
+                \item complicated rules
+                \item difficult for different ASTs
+                \item syntactical
+            \end{itemize}
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Concept: Generating Transpiler}
+    \begin{itemize}
+        \item takes a fragment of code
+        \item produces a fragment of code \pause
+        \item advantages:
+            \begin{itemize}
+                \item general
+                \item allows structure changes
+            \end{itemize} \pause
+        \item disadvantages: 
+            \begin{itemize}
+                \item not modular
+                \item not necessarily structure preserving
+            \end{itemize}
+    \end{itemize}
+    \end{frame}
+    
+    % \begin{frame}{Concept: Correctness}
+    % \Huge TODO
+    % \end{frame}
+    
+    % Translation
+    
+    \begin{frame}{Idea: Structure based}
+    \begin{itemize}
+        \item synthesize translation rules
+        \item compare examples in the two languages
+        \item same context $\Rightarrow$ same semantics \pause
+        \item advantages:
+            \begin{itemize}
+                \item modular
+                \item well suited for very similar languages
+            \end{itemize} \pause
+        \item disadvantages: 
+            \begin{itemize}
+                \item complicated rules
+                \item difficult for different ASTs
+                \item syntactical
+            \end{itemize}
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Idea: Partial evaluation}
+    \begin{itemize}
+        \item interpreter of A in B
+        \item partial evaluation of B
+        \item symbolic evaluation $\Rightarrow$ partial eval, interpreter \pause
+        \item advantages:
+            \begin{itemize}
+                \item reuses written code
+                \item correctness transfer
+                \item one manual transpilation
+            \end{itemize} \pause
+        \item disadvantages: 
+            \begin{itemize}
+                \item needs complex components
+                \item work for each new language
+            \end{itemize}
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Idea: Translation}
+    \begin{itemize}
+        \item text to text translation \pause % or graph
+        \item advantages:
+            \begin{itemize}
+                \item works for natural languages
+                \item classical machine learning problem
+            \end{itemize} \pause
+        \item disadvantages: 
+            \begin{itemize}
+                \item no correctness guarantees
+                \item complicated structural constraints
+                \item needs suitable representation
+                \item no insight
+            \end{itemize}
+    \end{itemize}
+    % like a neural network translating normal languages
+    \end{frame}
+    
+    \begin{frame}{Idea: Synthesis}
+    \Huge TODO
+    \end{frame}
+    
+    \begin{frame}{Idea: Synthesis + Validation}
+    \Huge TODO
+    \end{frame}
+    
+    \begin{frame}{Idea: Common language}
+    \Huge TODO
+    \end{frame}
+    
+    % \begin{frame}{Idea: }
+    % \Huge TODO
+    % \end{frame}
+    
+    
+    
+    
+    \begin{frame}{Applications}
+    \begin{minipage}{.49\textwidth}
+    \begin{itemize}
+        \item Similar to Pandoc, Rosetta, LLVM \pause
+        \item API changes \pause
+        \item virtual API \pause
+        \item Migration to new code (maintainance) \pause
+            \begin{itemize}
+                \item COBOL $\to$ C(++) \pause
+                \item PHP $\to$ Javascript/Python \pause
+                \item X $\to$ Typescript \pause
+            \end{itemize}
+    \end{itemize}
+    \end{minipage}%
+    \begin{minipage}{.49\textwidth}
+    \begin{itemize}
+        \item Language features \pause
+            \begin{itemize}
+                \item verification \pause
+                \item libraries \pause
+                \item speed \pause
+                \item knowledge \pause
+                \item safety guarantees \pause
+                \item optimizations \pause
+                \item tooling environment \pause
+            \end{itemize}
+        \item competing frameworks % angular, react, vue,   fabric, forge
+    \end{itemize}
+    \end{minipage}
+    \end{frame}
+    
+    
+\end{document}
