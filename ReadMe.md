@@ -2,7 +2,7 @@
 
 In this repository, we investigate different aspects and solution (ideas) to the problem of having too many programming languages.
 
-![[Main/Projekte/transpilation/attachments/00576-3932279271-roboter writes papers, an illustration of, trending on behance, institutional critique, digital illustration, behance hd, storyb.png]]
+![[logo.png]]
 
 ## Problem
 
