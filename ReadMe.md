@@ -137,6 +137,8 @@ We first introduce the works shallowly and go in-depth in the corresponding idea
 ## Related Work
 
 ### Program Equivalence
+An important part in the translation is the equivalence of the original and translated program.
+This equivalence either guides the translation/synthesis or has to be established alongside/after the translation.
 
 - [Generative Language Modeling for Automated Theorem Proving](https://arxiv.org/pdf/2009.03393.pdf)
 - [Program Equivalence](https://drops.dagstuhl.de/opus/volltexte/2018/9758/pdf/dagrep_v008_i004_p001_18151.pdf)
@@ -145,16 +147,24 @@ CompCert
 [add from folder]
 
 #### Translation Validation
+Translation Validation is a special subfield that focuses on automated equivalence checks of programs before and after optimizations.
+
 - [End-to-End Translation Validation for the Halide Langauge](https://hal.inria.fr/hal-03653857/document)
 - [Alive2: Bounded Translation Validation for LLVM](https://dl.acm.org/doi/pdf/10.1145/3453483.3454030)
 - [Counterexample-Guided Correlation Algorithm for Translation Validation](https://shubhani.compiler.ai/pubs/oopsla20.pdf)
 
 #### Program Translation
+Automated program translations like superoptimizers have to guarantee program equivalence (usually in one language). Superoptimizers are often restricted to loop-free short code segments.
+
 - [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
 
 [add from folder]
 
 ### Synthesis
+The target program has to be synthesized from the original program.
+The programs need to be equivalent and can be quite complex involving complicated control flow.
+However, the synthesis has a clear guideline as the shape of the original program can be used and the semantics of the result is fully defined. 
+
 - [CounterExample-Guided Inductive Synthesis (CEGIS)](https://www-cs.stanford.edu/~preiner/publications/2017/PreinerNiemetzBiere-TACAS17.pdf)
 - [Synthesis of Loop-free Programs](https://dl.acm.org/doi/pdf/10.1145/1993316.1993506)
 - [Program Synthesis](https://www.nowpublishers.com/article/Details/PGL-010)
@@ -162,10 +172,16 @@ CompCert
 - [Bottom-Up Synthesis of Recursive Functional Programs using Angelic Execution](https://dl.acm.org/doi/pdf/10.1145/3498682)
 - [Evaluating Large Language Models Trained on Code](https://arxiv.org/pdf/2107.03374.pdf)
 - [APIfix: Output-Oriented Program Synthesis for Combating Breaking Changes in Libraries](https://gaoxiang9430.github.io/papers/APIFix.pdf)
+- [FlashFill++: Scaling Programming by Example by Cutting to the Chase](https://www.microsoft.com/en-us/research/uploads/prod/2022/12/flashfillpp-popl-23-camera-ready.pdf)
+- Inductive Synthesis of Structurally Recursive Functional Programs from Non-recursive Expressions
+- [Top-Down Synthesis For Library Learning](https://arxiv.org/pdf/2211.16605.pdf)
 
 [add from folder]
 
 ### Artificial Intelligence
+A promising approach is neural-guided synthesis using artificial intelligence for translation.
+These tools have been proven to be capable of synthesizing complex code with acceptable accuracy.
+However, the current projects mainly look into natural language and do not establish thight guarantees like formal semantics of the output.
 
 - [Competition-Level Code Generation with AlphaCode](https://www.datascienceassn.org/sites/default/files/Competition-Level%20Code%20Generation%20with%20AlphaCode.pdf)
 - [CrossBeam: Learning To Search in Bottom-Up Program Synthesis](https://arxiv.org/pdf/2203.10452.pdf)
@@ -176,6 +192,10 @@ CompCert
 - [Github CoPilot](https://github.com/features/copilot)
 
 ### Transpilers
+Transpilers are mainly written by hand and are far from perfect.
+The produced code is not always readable and sometimes needs post-processing.
+However, there are often formal (or implicit) guarantees that the result agrees with the original program.
+
 - [A General Purpose Transpiler for Fully Homomorphic Ecryption](https://arxiv.org/pdf/2106.07893.pdf)
 - [Interlanguage Migration: From Scripts to Programs](https://dl.acm.org/doi/pdf/10.1145/1176617.1176755)
 - [Improving mobile app development using transpilers with maintainable outputs](https://dl.acm.org/doi/pdf/10.1145/3422392.3422426)
@@ -208,6 +228,7 @@ CompCert
 The most promising idea is to use unsupervised trained neural networks to perform (guided) synthesis.
 To ensure trust, formal methods are needed to prove equivalence of the translated programs.
 
+<!-- or sufficient automated tests -->
 
 ### TransPile
 
