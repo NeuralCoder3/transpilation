@@ -5,7 +5,21 @@
     - [ ] S. Gulwani, S. Jha, A. Tiwari, and R. Venkatesan. Synthesis of loop-free programs. In Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI ’11, pages 62–73, 2011.
 - [ ] depth limited iteration
 - [ ] Protobuf universal language
-- [ ] 
+- [ ] [Automated Transpilation of Imperative to Functional Code using Neural-Guided Program Synthesis (Extended Version)](https://arxiv.org/pdf/2203.09452.pdf)
+- [ ] Backends (better with llvm)
+- [ ] use partial compilation for equality (including control flow)
+- [ ] provide equivalence proof (inline) (hoare/separation logic)
+- [ ] [Language Gimmics](https://buttondown.email/hillelwayne/archive/microfeatures-id-like-to-see-in-more-languages/)
+- [ ] TransUse
+    - [ ] Adapter
+    - [ ] Api Transpiler
+- [ ] Codex
+    - [ ] HTML -> React
+    - [ ] Python -> R
+- [ ] Universal Transpiler
+- [ ] Pandoc
+- [ ] Bounded Control Flow
+- [ ] POPL Papers
 
 - [ ] any framework/library in any language
     - [ ] Communication Pipline
@@ -20,6 +34,9 @@
 - [ ] Zip Control Flow => Combine, Split
 - [ ] CoPilot Translate
 - [ ] ChatGPT Transpile -> DSL
+- [ ] Old language to new
+- [ ] readability
+- [ ] Equivalence through testing
 
 - [ ] incorporate ideas from 22-05 presentation
 
@@ -50,6 +67,16 @@
 - [ ] [AlphaCode](https://arxiv.org/pdf/2203.07814.pdf)
 - [ ] [Proof generation](https://arxiv.org/pdf/2202.01344.pdf)
 - [ ] [Proof Generation 2](https://arxiv.org/pdf/2009.03393.pdf)
+- [ ] Synthesis Toolbox
+    - [ ] [Flash Fill](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/popl11-synthesis.pdf)
+    - [ ] API Fix
+    - [ ] Übersicht Techniken (neural synthesize techniques)
+    - [ ] Übersicht Anwendungen
+    - [ ] Ideen
+        - [ ] [Dependabot 2.0](https://github.com/vlts1/ruzz)
+    - [ ] apply certified generation
+        - [ ] Program Sythesis => Semantics
+        - [ ] Image => use assets
 
 - [ ] Testing
     - [ ] PropTest (Rust) -> Hypothesis

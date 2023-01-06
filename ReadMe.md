@@ -121,15 +121,99 @@ However, until somebody takes time to deeply understand the interpreter, the cur
 
 ## Goal
 
+There are multiple concrete goals.
+But abstractly, we want to bridge the gap between languages.
+To this end, it should be possible to use one languages tools, features, and libraries in another language.
+
+More concretely, we want to develop an universal transpiler (or parts thereof).
+
+
+There are multiple conceptual paths to attack the problem.
+Each path offers multiple ways to achieve the goal.
+
+Before we will look closer at ideas, we focus on related work in the field.
+We first introduce the works shallowly and go in-depth in the corresponding idea files.
+
+## Related Work
+
+### Program Equivalence
+
+- [Generative Language Modeling for Automated Theorem Proving](https://arxiv.org/pdf/2009.03393.pdf)
+- [Program Equivalence](https://drops.dagstuhl.de/opus/volltexte/2018/9758/pdf/dagrep_v008_i004_p001_18151.pdf)
+- [Interaction Trees](https://arxiv.org/pdf/1906.00046.pdf)
+CompCert
+[add from folder]
+
+#### Translation Validation
+- [End-to-End Translation Validation for the Halide Langauge](https://hal.inria.fr/hal-03653857/document)
+- [Alive2: Bounded Translation Validation for LLVM](https://dl.acm.org/doi/pdf/10.1145/3453483.3454030)
+- [Counterexample-Guided Correlation Algorithm for Translation Validation](https://shubhani.compiler.ai/pubs/oopsla20.pdf)
+
+#### Program Translation
+- [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
+
+[add from folder]
+
+### Synthesis
+- [CounterExample-Guided Inductive Synthesis (CEGIS)](https://www-cs.stanford.edu/~preiner/publications/2017/PreinerNiemetzBiere-TACAS17.pdf)
+- [Synthesis of Loop-free Programs](https://dl.acm.org/doi/pdf/10.1145/1993316.1993506)
+- [Program Synthesis](https://www.nowpublishers.com/article/Details/PGL-010)
+- Cyclic Program Synthesis
+- [Bottom-Up Synthesis of Recursive Functional Programs using Angelic Execution](https://dl.acm.org/doi/pdf/10.1145/3498682)
+- [Evaluating Large Language Models Trained on Code](https://arxiv.org/pdf/2107.03374.pdf)
+- [APIfix: Output-Oriented Program Synthesis for Combating Breaking Changes in Libraries](https://gaoxiang9430.github.io/papers/APIFix.pdf)
+
+[add from folder]
+
+### Artificial Intelligence
+
+- [Competition-Level Code Generation with AlphaCode](https://www.datascienceassn.org/sites/default/files/Competition-Level%20Code%20Generation%20with%20AlphaCode.pdf)
+- [CrossBeam: Learning To Search in Bottom-Up Program Synthesis](https://arxiv.org/pdf/2203.10452.pdf)
+- [Formal Mathematics Statement Curriculum Learning](https://arxiv.org/pdf/2202.01344.pdf)
+- [OpenAI Codex](https://beta.openai.com/docs/guides/code/best-practices)
+- [ChatGPT](https://chat.openai.com/chat)
+- [Salesforce CodeT5](https://arxiv.org/abs/2109.00859) ([Github](https://github.com/salesforce/CodeT5))
+- [Github CoPilot](https://github.com/features/copilot)
+
+### Transpilers
+- [A General Purpose Transpiler for Fully Homomorphic Ecryption](https://arxiv.org/pdf/2106.07893.pdf)
+- [Interlanguage Migration: From Scripts to Programs](https://dl.acm.org/doi/pdf/10.1145/1176617.1176755)
+- [Improving mobile app development using transpilers with maintainable outputs](https://dl.acm.org/doi/pdf/10.1145/3422392.3422426)
+- [Automated Transpilation of Imperative to Functional Code using Neural-Guided Program Synthesis (Extended Version)](https://arxiv.org/pdf/2203.09452.pdf)
+- [A Simple Abstraction of Arrays and Maps by Program Translation](https://arxiv.org/pdf/1506.04161.pdf)
+- [Unsupervised Translation of Programming Languages](https://proceedings.neurips.cc/paper/2020/file/ed23fbf18c2cd35f8c7f8de44f85c08d-Paper.pdf)
+- [Pandoc](https://pandoc.org/)
+
+### Related Concepts
+- Synthesis
+    - Neural(-guided) synthesis
+    - Top-Down synthesis
+    - Search/Planning
+- Program Equivalence
+    - Translation Validation
+    - Separation Logic
+- Language Design
+    - Program Paradigms
+    - Compilation Transpilation
+    - Decompilation
+    - Staging
+    - Metaprogramming
+    - DSL
+    - ABI/FFI
+    - Partial Evaluation
+
 
 ## Ideas
 
+The most promising idea is to use unsupervised trained neural networks to perform (guided) synthesis.
+To ensure trust, formal methods are needed to prove equivalence of the translated programs.
 
-Verifying Compiler => keep semantics, preserve properties
 
 ### TransPile
 
+
 ### TransUse
 
-ABI/FFI -> DSL Github
+ABI/FFI -> [DSL Github](https://github.com/NeuralCoder3/thorin-dsl)
 APIFix
+
