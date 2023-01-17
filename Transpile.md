@@ -39,6 +39,9 @@
 - [ ] Equivalence through testing
 
 - [ ] incorporate ideas from 22-05 presentation
+- [ ] Synthesize Toolbox (siehe oben)
+- [ ] Transpile NL <-> C++ <-> OCaml
+- [ ] https://www.reddit.com/r/lisp/comments/x0covh/lua_to_lisp_is_lua_just_sugared_lisp/
 
 ## Other
 
@@ -77,6 +80,7 @@
     - [ ] apply certified generation
         - [ ] Program Sythesis => Semantics
         - [ ] Image => use assets
+- [Top-Down Synthesis For Library Learning](https://arxiv.org/pdf/2211.16605.pdf)
 
 - [ ] Testing
     - [ ] PropTest (Rust) -> Hypothesis
