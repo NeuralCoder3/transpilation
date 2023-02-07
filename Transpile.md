@@ -42,6 +42,14 @@
 - [ ] Synthesize Toolbox (siehe oben)
 - [ ] Transpile NL <-> C++ <-> OCaml
 - [ ] https://www.reddit.com/r/lisp/comments/x0covh/lua_to_lisp_is_lua_just_sugared_lisp/
+- [ ] Transpile to/from new language => quick prototype
+- [ ] language extension (like OCaml ppx)
+    - [ ] transparent syntax extension
+- [ ] example why hand coding/ml necessary (pascal array, python quirks)
+- [ ] TransCode
+    - [ ] Synthesize rewrite rules
+    - [ ] Generate + allow manual improvement on top
+    - [ ] feedback loop to improve
 
 ## Other
 

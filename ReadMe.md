@@ -2,7 +2,7 @@
 
 In this repository, we investigate different aspects and solution (ideas) to the problem of having too many programming languages.
 
-![[logo.png]]
+![Logo](attachments/logo.png)
 
 ## Problem
 
@@ -176,6 +176,9 @@ However, the synthesis has a clear guideline as the shape of the original progra
 - Inductive Synthesis of Structurally Recursive Functional Programs from Non-recursive Expressions
 - [Top-Down Synthesis For Library Learning](https://arxiv.org/pdf/2211.16605.pdf)
 - Bootstrapping Library-Based Synthesis
+- [Abstract Syntax Networks for Code Generation and Semantic Parsing](https://arxiv.org/pdf/1704.07535.pdf)
+    - [Github](https://github.com/xiye17/torchASN)
+- [Synthesizing an Instruction Selection Rule Library from Semantic Specifications](https://pp.ipd.kit.edu/uploads/publikationen/buchwald18cgo.pdf)
 
 [add from folder]
 
