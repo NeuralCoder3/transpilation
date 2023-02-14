@@ -5,19 +5,17 @@ In this repository, we investigate different aspects and solution (ideas) to the
 ![Logo](attachments/logo.png)
 
 - [Problem](#Problem)
-	- [Examples](#Problem#Examples)
+	- [Examples](#Examples)
 - [Goal](#Goal)
-- [[#Related Work|Related Work]]
-	- [[#Related Work#Program Equivalence|Program Equivalence]]
-		- [[#Program Equivalence#Translation Validation|Translation Validation]]
-		- [[#Program Equivalence#Program Translation|Program Translation]]
-	- [[#Related Work#Synthesis|Synthesis]]
-	- [[#Related Work#Artificial Intelligence|Artificial Intelligence]]
-	- [[#Related Work#Transpilers|Transpilers]]
-	- [[#Related Work#Related Concepts|Related Concepts]]
-- [[#Ideas|Ideas]]
-	- [[#Ideas#TransPile|TransPile]]
-	- [[#Ideas#TransUse|TransUse]]
+- [Related Work](#Related Work)
+	- [Program Equivalence](#Program Equivalence)
+		- [Translation Validation](#Translation Validation)
+		- [Program Translation](#Program Translation)
+	- [Synthesis](#Synthesis)
+	- [Artificial Intelligence](#Artificial Intelligence)
+	- [Transpilers](#Transpilers)
+	- [Related Concepts](#Related Concepts)
+- [Ideas](#Ideas)
 
 
 ## Problem
