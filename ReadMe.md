@@ -4,9 +4,9 @@ In this repository, we investigate different aspects and solution (ideas) to the
 
 ![Logo](attachments/logo.png)
 
-- [[#Problem|Problem]]
-	- [[#Problem#Examples|Examples]]
-- [[#Goal|Goal]]
+- [Problem](#Problem)
+	- [Examples](#Problem#Examples)
+- [Goal](#Goal)
 - [[#Related Work|Related Work]]
 	- [[#Related Work#Program Equivalence|Program Equivalence]]
 		- [[#Program Equivalence#Translation Validation|Translation Validation]]
@@ -95,6 +95,8 @@ A while loop and a tail recursive function are quite different in appearance, bu
 Despite these similarities or due to the freedom of expression, many languages developed and are in use.
 It is good that you can freely choose how you want to write code.
 However, it is a shame when tools are locked to a language or need time-intensive ports and re-implementations.
+
+![Logo](attachments/standards3.png)
 
 ### Examples
 
@@ -256,7 +258,7 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 
 ## Ideas
 
-We present some promising ideas in [./Ideas/]. 
+We present some promising ideas in [./Ideas/](./Ideas/). 
 The ideas are not exhaustive.  
 
 ### Building Blocks
@@ -293,7 +295,7 @@ _Related Projects_: APIFix, [DSL Project Github](https://github.com/NeuralCoder3
 
 ### Concrete Ideas
 
-[[Ideas/NeuralTransformer]]: A promising but simple approach is to use unsuperised trained neural text transformers. These LLM (large language model) presented knowledge about many languages and their (intuitive) semantics (connection to other languages including natural language). The idea in this approach is to synthesize the resulting program and refine it stepwise using (automated) feedback.
+[Ideas/NeuralTransformer](Ideas/NeuralTransformer): A promising but simple approach is to use unsuperised trained neural text transformers. These LLM (large language model) presented knowledge about many languages and their (intuitive) semantics (connection to other languages including natural language). The idea in this approach is to synthesize the resulting program and refine it stepwise using (automated) feedback.
 
 ## Applications
 
