@@ -4,6 +4,22 @@ In this repository, we investigate different aspects and solution (ideas) to the
 
 ![Logo](attachments/logo.png)
 
+- [[#Problem|Problem]]
+	- [[#Problem#Examples|Examples]]
+- [[#Goal|Goal]]
+- [[#Related Work|Related Work]]
+	- [[#Related Work#Program Equivalence|Program Equivalence]]
+		- [[#Program Equivalence#Translation Validation|Translation Validation]]
+		- [[#Program Equivalence#Program Translation|Program Translation]]
+	- [[#Related Work#Synthesis|Synthesis]]
+	- [[#Related Work#Artificial Intelligence|Artificial Intelligence]]
+	- [[#Related Work#Transpilers|Transpilers]]
+	- [[#Related Work#Related Concepts|Related Concepts]]
+- [[#Ideas|Ideas]]
+	- [[#Ideas#TransPile|TransPile]]
+	- [[#Ideas#TransUse|TransUse]]
+
+
 ## Problem
 
 ```
@@ -25,7 +41,7 @@ There are many aspects to languages (non-exclusive) (I only give one or two exam
 * dependent type systems (Gallina, Idris)
 * functional programming (Haskell, OCaml)
 * imperative (C++)
-* object oriented (Kava)
+* object oriented (Java)
 * dynamically typed (python, javascript)
 * array programming (APL, Fortran)
 * low-level (C, Rust)
@@ -136,6 +152,8 @@ We first introduce the works shallowly and go in-depth in the corresponding idea
 
 ## Related Work
 
+We collect interesting papers in the related areas of this work.
+
 ### Program Equivalence
 An important part in the translation is the equivalence of the original and translated program.
 This equivalence either guides the translation/synthesis or has to be established alongside/after the translation.
@@ -207,6 +225,8 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - [A Simple Abstraction of Arrays and Maps by Program Translation](https://arxiv.org/pdf/1506.04161.pdf)
 - [Unsupervised Translation of Programming Languages](https://proceedings.neurips.cc/paper/2020/file/ed23fbf18c2cd35f8c7f8de44f85c08d-Paper.pdf)
 - [Pandoc](https://pandoc.org/)
+- Popular Media
+    - [Legacy Code Conversion - Computerphile](https://www.youtube.com/watch?v=Xz06zYlQrck)
 
 ### Related Concepts
 - Synthesis
@@ -216,6 +236,8 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - Program Equivalence
     - Translation Validation
     - Separation Logic
+    - symbolic abstraction
+    - smt
 - Language Design
     - Program Paradigms
     - Compilation Transpilation
@@ -225,20 +247,56 @@ However, there are often formal (or implicit) guarantees that the result agrees 
     - DSL
     - ABI/FFI
     - Partial Evaluation
+- Tests
+    - QA
+    - logarithmic types
+    - fuzzing
+    - specification mining
 
 
 ## Ideas
 
-The most promising idea is to use unsupervised trained neural networks to perform (guided) synthesis.
-To ensure trust, formal methods are needed to prove equivalence of the translated programs.
+We present some promising ideas in [./Ideas/]. 
+The ideas are not exhaustive.  
 
-<!-- or sufficient automated tests -->
+### Building Blocks
 
-### TransPile
+**Transformers**: LLM are currently shown to be knowledgable in complicated synthesis tasks.
+The unsupervised trained models present a grasp of related concepts like the relation between natural language and programming languages or between programming languages.
+Recent papers and projects have shown first successes in using text transformers to synthesize programs. A more refined and verified approach could build upon this preliminary success.
 
+**Counter Example Guided Synthesis**: Counterexamples contradicting the synthesis specification can be used to refine and guide the search to a solution. These counterexamples can be obtained using SMT solvers or fuzzers.
 
-### TransUse
+**Tests**: We can employ automated tests/symbolic abstraction to find program equivalence contradiction. These can be used to refine the result and to ensure trust in a unverified result. This way, we can harvest the power of neural networks without suffering from the unpredictable/unverified nature of neural networks.
 
-ABI/FFI -> [DSL Github](https://github.com/NeuralCoder3/thorin-dsl)
-APIFix
+**Search**: Many parts of the approach involve/can be formulated as search problems.
+For instance the construction (synthesis) of the resulting program can be seen as a search for a valid program with the same properties.
+The search has to be heavily pruned and possibly (neural-)guided either directly or via heuristics. A common approach in recent research is to use beam search. There are papers that use bottom-up search as well as other papers that use a top-down approach.
+
+**Latent Representation**: The neural guided approaches can attach to the approach at different levels. Either as guide, as main component, as checked assistant, ... .
+In any way, we need to find a suitable way to communicate and represent the data we present to the networks. 
+This can happen as simple text (as shown effective by LLM) or using more informative and sophisticated datastructures like graph nets or AST network structures.
+Historically more complicated structures did not provide better performance. But recent research showed a more focused network leading to better performance with less resource consumption.
+
+**Partial Eval**: One could build on refined and optimized futamura projects to transpile programs in languages supporting partial evaluation (beta reduction and propagation) that implement corresponding interpreters/compilers. A lingua franca of programming (like in pandas or FFI communication) could make this approach feasible and also help in other approaches.
+
+**Rewrite Rules**: Classically, transpilers operate in declarative programming languages (prolog) using rewrite rules. One idea could be to semi-automatically synthesize these rules.
+The approach would be limited to match-rule-based rewriting but would allow for more interaction and control. It would especially be open to formal verification. 
+
+**ABI/FFI**: A unrelated concept to increase interoperability is to make it easier to call functions from other languages. This can happen at different abstraction level.
+The functions can be linked at the language level, at C level, at assembly level.
+The link can happen statically as foreign function using a FFI or by transpilation or
+at runtime using communication bridges.
+The function needs a common interface between both languages. This can be as simple
+as the standard FFI interface, a JSON bridge, or a universal communication language.
+_Related Projects_: APIFix, [DSL Project Github](https://github.com/NeuralCoder3/thorin-dsl)
+
+### Concrete Ideas
+
+[[Ideas/NeuralTransformer]]: A promising but simple approach is to use unsuperised trained neural text transformers. These LLM (large language model) presented knowledge about many languages and their (intuitive) semantics (connection to other languages including natural language). The idea in this approach is to synthesize the resulting program and refine it stepwise using (automated) feedback.
+
+## Applications
+
+Here, we collect (more) concrete ideas for applications of our approaches:
+* 
 
