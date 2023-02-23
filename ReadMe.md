@@ -63,6 +63,7 @@ There are good (my opinion) reasons to use different languages:
     * simplicity (depedent on special cases -> maybe consider staging)
     * complexity (depedent on special cases -> maybe consider staging)
 * design around special use case (not just primitives)
+**Note**: Many of these reasons could be summarized with the debate about static vs dynamic typing, functional vs imperative, dependent vs non-dependent types. And the complexity of specifying implicit assumption. This is an area that warrants improvement. However, it will not be our focus here.
 
 There are also not so good (my opinion) reasons:
 * Tools available for this language
@@ -212,6 +213,7 @@ However, the current projects mainly look into natural language and do not estab
 - [ChatGPT](https://chat.openai.com/chat)
 - [Salesforce CodeT5](https://arxiv.org/abs/2109.00859) ([Github](https://github.com/salesforce/CodeT5))
 - [Github CoPilot](https://github.com/features/copilot)
+- [Transformer models: an introduction and catalog](https://arxiv.org/pdf/2302.07730.pdf)
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
@@ -293,10 +295,19 @@ _Related Projects_: APIFix, [DSL Project Github](https://github.com/NeuralCoder3
 
 ### Concrete Ideas
 
-[Ideas/NeuralTransformer](Ideas/NeuralTransformer): A promising but simple approach is to use unsuperised trained neural text transformers. These LLM (large language model) presented knowledge about many languages and their (intuitive) semantics (connection to other languages including natural language). The idea in this approach is to synthesize the resulting program and refine it stepwise using (automated) feedback.
+We can group the ideas in the following categories:
+* Interoperability
+* Program Transpilation
+
+[Ideas/NeuralTransformer](Ideas/NeuralTransformer): A promising but simple approach is to use unsupervised trained neural text transformers. These LLM (large language model) presented knowledge about many languages and their (intuitive) semantics (connection to other languages including natural language). The idea in this approach is to synthesize the resulting program and refine it stepwise using (automated) feedback.
+
+[see presentation]
 
 ## Applications
 
 Here, we collect (more) concrete ideas for applications of our approaches:
 * 
+
+
+
 
