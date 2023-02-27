@@ -162,7 +162,9 @@ This equivalence either guides the translation/synthesis or has to be establishe
 - [Generative Language Modeling for Automated Theorem Proving](https://arxiv.org/pdf/2009.03393.pdf)
 - [Program Equivalence](https://drops.dagstuhl.de/opus/volltexte/2018/9758/pdf/dagrep_v008_i004_p001_18151.pdf)
 - [Interaction Trees](https://arxiv.org/pdf/1906.00046.pdf)
-CompCert
+- [Self-Supervised Learning to Prove Equivalence Between Straight-Line Programs via Rewrite Rules](https://arxiv.org/pdf/2109.10476.pdf)
+- CompCert
+
 [add from folder]
 
 #### Translation Validation
@@ -174,8 +176,6 @@ Translation Validation is a special subfield that focuses on automated equivalen
 
 #### Program Translation
 Automated program translations like superoptimizers have to guarantee program equivalence (usually in one language). Superoptimizers are often restricted to loop-free short code segments.
-
-- [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
 
 [add from folder]
 
@@ -198,6 +198,7 @@ However, the synthesis has a clear guideline as the shape of the original progra
 - [Abstract Syntax Networks for Code Generation and Semantic Parsing](https://arxiv.org/pdf/1704.07535.pdf)
     - [Github](https://github.com/xiye17/torchASN)
 - [Synthesizing an Instruction Selection Rule Library from Semantic Specifications](https://pp.ipd.kit.edu/uploads/publikationen/buchwald18cgo.pdf)
+- [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
 
 [add from folder]
 
