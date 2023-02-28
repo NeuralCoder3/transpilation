@@ -21,10 +21,9 @@ In this repository, we investigate different aspects and solution (ideas) to the
 ## Problem
 
 ```
-TLDR: There are features bound to programming languages that are conceptually independent of the concrete language used.
-
+TLDR: 
+There are features bound to programming languages that are conceptually independent of the concrete language used.
 With over 9000 programming languages in use, porting these tools by hand to all popular languages is infeasible.
-
 In conclusion, this leads to unncessesary work and unavailability of tools.
 ```
 
@@ -155,6 +154,13 @@ We first introduce the works shallowly and go in-depth in the corresponding idea
 
 We collect interesting papers in the related areas of this work.
 
+### Language Overview
+An overview of languages and tools connecting languages (e.g. transpiler, compiler).
+- [Programming Language Database](https://pldb.com/) (4000 languages) [Github](https://github.com/breck7/pldb)
+- [Landscape of languages](https://docs.google.com/spreadsheets/d/1P738jVhd9-UkNneIRN6VbEH-stDiKbDbB0WWPROv6lk/edit?usp=sharing) (compiler, transpiler overview, incomplete)
+    - [Visualization](https://github.com/NeuralCoder3/language-map)
+- [Langugage Definition Tool Ott](https://github.com/ott-lang/ott)
+
 ### Program Equivalence
 An important part in the translation is the equivalence of the original and translated program.
 This equivalence either guides the translation/synthesis or has to be established alongside/after the translation.
@@ -215,6 +221,13 @@ However, the current projects mainly look into natural language and do not estab
 - [Salesforce CodeT5](https://arxiv.org/abs/2109.00859) ([Github](https://github.com/salesforce/CodeT5))
 - [Github CoPilot](https://github.com/features/copilot)
 - [Transformer models: an introduction and catalog](https://arxiv.org/pdf/2302.07730.pdf)
+- [FlexGen: Running GPT on (relatively) low VRAM](https://news.ycombinator.com/item?id=34869960) [Github](https://github.com/FMInference/FlexGen)
+- [Jotte: Graph-based GPT Extension for large text corpus](https://news.ycombinator.com/item?id=34901481)
+- [Phind GPT Search](https://news.ycombinator.com/item?id=34884338)
+- [Open Source GPT Training](https://news.ycombinator.com/item?id=34858460)
+- [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070)
+- [The "an" neuron in GPT2](https://news.ycombinator.com/item?id=34821414)
+- [Run GPT3 fast](https://news.ycombinator.com/item?id=34702349)
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
@@ -230,6 +243,7 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - [Pandoc](https://pandoc.org/)
 - Popular Media
     - [Legacy Code Conversion - Computerphile](https://www.youtube.com/watch?v=Xz06zYlQrck)
+- [Oblivious Decompiler](https://www.recon.cx/2012/schedule/attachments/40_Chernov-Troshina.pdf)
 
 ### Related Concepts
 - Synthesis

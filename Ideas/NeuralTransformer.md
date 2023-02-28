@@ -50,3 +50,24 @@ Tests can not guarantee correctness. However, a well-tested code is enough in pr
 Additionally, tests provide us with concrete examples of a mis-translation.
 We can feed back input-output pairs to refine the result until both programs show the same behaviour.
 A tool like quickcheck/hypothesis might help to generate the tests.
+
+
+## Experiments & Results
+
+[see subfolder]
+
+
+## Related Literature
+Some literature that applies specifically to this experiment.
+This includes prompt engeneering attempt especially for \*GPT\* models.
+- GPT3 conditioning
+    - https://news.ycombinator.com/item?id=34869960#34873669
+- ChatGPT conditioning
+    - [Midjouney Prompt Engine 3](https://www.reddit.com/r/midjourney/comments/11chf6s/version_3_of_my_chatgpt_prompting_machine_it_now/)
+    - [Dan 5.0](https://www.reddit.com/r/ChatGPT/comments/10tevu1/new_jailbreak_proudly_unveiling_the_tried_and/)
+        - [Dan 6.0](https://www.reddit.com/r/ChatGPT/comments/10vinun/presenting_dan_60/)
+        - [SDAN](https://www.reddit.com/r/ChatGPT/comments/10vlzbo/presenting_sdan_simple_dan/)
+    - [SQL analyst in 26 recursive prompts](https://www.patterns.app/blog/2023/01/18/crunchbot-sql-analyst-gpt/)
+        - [Hackernews](https://news.ycombinator.com/item?id=34521149)
+- LLM Prompt Engeneering
+    - [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070) 

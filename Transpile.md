@@ -1,3 +1,6 @@
+**This file contains an unordered unstructured list of ideas/concepts to be incorporated in the other files**
+
+
 
 - [[Synthesis]]
 - [ ] Superoptimizer
