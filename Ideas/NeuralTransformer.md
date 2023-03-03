@@ -63,11 +63,30 @@ This includes prompt engeneering attempt especially for \*GPT\* models.
 - GPT3 conditioning
     - https://news.ycombinator.com/item?id=34869960#34873669
 - ChatGPT conditioning
-    - [Midjouney Prompt Engine 3](https://www.reddit.com/r/midjourney/comments/11chf6s/version_3_of_my_chatgpt_prompting_machine_it_now/)
+    - [Overview](https://www.jailbreakchat.com/)
+    - [prompt collection](https://github.com/f/awesome-chatgpt-prompts)
     - [Dan 5.0](https://www.reddit.com/r/ChatGPT/comments/10tevu1/new_jailbreak_proudly_unveiling_the_tried_and/)
         - [Dan 6.0](https://www.reddit.com/r/ChatGPT/comments/10vinun/presenting_dan_60/)
         - [SDAN](https://www.reddit.com/r/ChatGPT/comments/10vlzbo/presenting_sdan_simple_dan/)
     - [SQL analyst in 26 recursive prompts](https://www.patterns.app/blog/2023/01/18/crunchbot-sql-analyst-gpt/)
         - [Hackernews](https://news.ycombinator.com/item?id=34521149)
+    - [Midjouney Prompt Engine 3](https://www.reddit.com/r/midjourney/comments/11chf6s/version_3_of_my_chatgpt_prompting_machine_it_now/)
+    - [stable diffusion prompter](https://www.reddit.com/r/StableDiffusion/comments/11cfe1i/is_there_a_chatgpt_prompt_to_create_sd_prompts/)
 - LLM Prompt Engeneering
     - [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070) 
+- [ChatGPT official API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
+- [Pinecone long term vector memory](https://www.pinecone.io/)
+- [Chat from GPT](https://github.com/Kav-K/GPT3Discord) [Author Response](https://old.reddit.com/r/GPT3/comments/zxs18b/gpt3dalle2_discord_bot_with_mediumlong_term_memory/j22a0vk/) 
+
+<details>
+<summary>Table prompt GUI Interaction</summary>
+INSTRUCTIONS: Provide a {text) that you would like to make changes to. Generate a TABLE with 2
+columns, one with numbers and one with 5 different writing styles. After the TABLE is generated, ask
+the question "What writing style would you like to implement? Pick one from the table above" below
+the TABLE. Wait for the user to pick a number.
+
+
+text = 
+
+Execute the INSTRUCTIONS in a TABLE format:
+</details>

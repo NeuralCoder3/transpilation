@@ -117,6 +117,7 @@ It originates in Haskell and was sucessfully applied to other languages as well.
 There is QuickChick in Coq, Hypothesis in Python, based on Hypothesis there is PropTest in Rust, and there are 60 more **re**-implementations in other languages.
 To be more precise, there are at least six quickcheck re-implementations for python on Github with at least 15 stars.
 Some of these re-implementation "only" support random test generation while others are more fully features including features like test minimization.
+For more quickcheck re-implementations also see the website of [Hypothesis](https://hypothesis.works/articles/quickcheck-in-every-language/) (a python re-implementation of quickcheck/inspired-project).
 
 Before quickchick was re-implemented, the default way was to write the code, expose a FFI and use quickchick externally by hand.
 
@@ -228,6 +229,7 @@ However, the current projects mainly look into natural language and do not estab
 - [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070)
 - [The "an" neuron in GPT2](https://news.ycombinator.com/item?id=34821414)
 - [Run GPT3 fast](https://news.ycombinator.com/item?id=34702349)
+- [GPT Memory & Conversations](https://github.com/Kav-K/GPT3Discord)
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
