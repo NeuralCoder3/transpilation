@@ -264,7 +264,7 @@ However, there are often formal (or implicit) guarantees that the result agrees 
     - Staging
     - Metaprogramming
     - DSL
-    - ABI/FFI
+    - ABI/FFI, serilization, marshalling
     - Partial Evaluation
 - Tests
     - QA
@@ -308,7 +308,7 @@ The link can happen statically as foreign function using a FFI or by transpilati
 at runtime using communication bridges.
 The function needs a common interface between both languages. This can be as simple
 as the standard FFI interface, a JSON bridge, or a universal communication language.
-_Related Projects_: APIFix, [DSL Project Github](https://github.com/NeuralCoder3/thorin-dsl)
+_Related Projects_: APIFix, [DSL Project Github](https://github.com/NeuralCoder3/thorin-dsl), serilization, pickling, marshalling, isomorphism type system, [remote call procedure](https://en.wikipedia.org/wiki/Remote_procedure_call)
 
 ### Concrete Ideas
 
