@@ -77,6 +77,9 @@ This includes prompt engeneering attempt especially for \*GPT\* models.
 - [ChatGPT official API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
 - [Pinecone long term vector memory](https://www.pinecone.io/)
 - [Chat from GPT](https://github.com/Kav-K/GPT3Discord) [Author Response](https://old.reddit.com/r/GPT3/comments/zxs18b/gpt3dalle2_discord_bot_with_mediumlong_term_memory/j22a0vk/) 
+- [GPT Error Reduction](https://medium.com/@0xjfan/how-we-cut-the-rate-of-gpt-hallucinations-from-20-to-less-than-2-f3bfcc10e4ec) 
+- [openai cookbook](https://github.com/openai/openai-cookbook)
+- [openai prompt engeneering](https://learnprompting.org/docs/intro)
 
 <details>
 <summary>Table prompt GUI Interaction</summary>

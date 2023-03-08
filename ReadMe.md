@@ -230,6 +230,10 @@ However, the current projects mainly look into natural language and do not estab
 - [The "an" neuron in GPT2](https://news.ycombinator.com/item?id=34821414)
 - [Run GPT3 fast](https://news.ycombinator.com/item?id=34702349)
 - [GPT Memory & Conversations](https://github.com/Kav-K/GPT3Discord)
+- [Show your work: Scratchpads for intermediate computation with language models](https://arxiv.org/pdf/2112.00114.pdf)
+- [GPT Error Reduction](https://medium.com/@0xjfan/how-we-cut-the-rate-of-gpt-hallucinations-from-20-to-less-than-2-f3bfcc10e4ec) 
+- [openai cookbook](https://github.com/openai/openai-cookbook)
+- [openai prompt engeneering](https://learnprompting.org/docs/intro)
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
