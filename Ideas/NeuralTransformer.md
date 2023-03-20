@@ -10,7 +10,6 @@ Afterward, the trust (program equivalence) in the output has to be established.
     - [ ] connect concepts (unsupervised learning)
 - [ ] conceptually simple
 - [ ] modular & configurable
-- [ ]  
 
 ## Difficulties & Limitations
 - [ ] no formal guarantees
@@ -60,26 +59,36 @@ A tool like quickcheck/hypothesis might help to generate the tests.
 ## Related Literature
 Some literature that applies specifically to this experiment.
 This includes prompt engeneering attempt especially for \*GPT\* models.
-- GPT3 conditioning
-    - https://news.ycombinator.com/item?id=34869960#34873669
-- ChatGPT conditioning
-    - [Overview](https://www.jailbreakchat.com/)
-    - [prompt collection](https://github.com/f/awesome-chatgpt-prompts)
-    - [Dan 5.0](https://www.reddit.com/r/ChatGPT/comments/10tevu1/new_jailbreak_proudly_unveiling_the_tried_and/)
-        - [Dan 6.0](https://www.reddit.com/r/ChatGPT/comments/10vinun/presenting_dan_60/)
-        - [SDAN](https://www.reddit.com/r/ChatGPT/comments/10vlzbo/presenting_sdan_simple_dan/)
-    - [SQL analyst in 26 recursive prompts](https://www.patterns.app/blog/2023/01/18/crunchbot-sql-analyst-gpt/)
-        - [Hackernews](https://news.ycombinator.com/item?id=34521149)
-    - [Midjouney Prompt Engine 3](https://www.reddit.com/r/midjourney/comments/11chf6s/version_3_of_my_chatgpt_prompting_machine_it_now/)
-    - [stable diffusion prompter](https://www.reddit.com/r/StableDiffusion/comments/11cfe1i/is_there_a_chatgpt_prompt_to_create_sd_prompts/)
-- LLM Prompt Engeneering
-    - [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070) 
-- [ChatGPT official API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
-- [Pinecone long term vector memory](https://www.pinecone.io/)
-- [Chat from GPT](https://github.com/Kav-K/GPT3Discord) [Author Response](https://old.reddit.com/r/GPT3/comments/zxs18b/gpt3dalle2_discord_bot_with_mediumlong_term_memory/j22a0vk/) 
-- [GPT Error Reduction](https://medium.com/@0xjfan/how-we-cut-the-rate-of-gpt-hallucinations-from-20-to-less-than-2-f3bfcc10e4ec) 
-- [openai cookbook](https://github.com/openai/openai-cookbook)
-- [openai prompt engeneering](https://learnprompting.org/docs/intro)
+- Prompting
+    - GPT3 conditioning
+        - https://news.ycombinator.com/item?id=34869960#34873669
+        - [GPT3 to Chat](https://github.com/Kav-K/GPT3Discord) [Author Response](https://old.reddit.com/r/GPT3/comments/zxs18b/gpt3dalle2_discord_bot_with_mediumlong_term_memory/j22a0vk/) 
+    - ChatGPT conditioning
+        - [Overview](https://www.jailbreakchat.com/)
+        - [prompt collection](https://github.com/f/awesome-chatgpt-prompts)
+        - [Dan 5.0](https://www.reddit.com/r/ChatGPT/comments/10tevu1/new_jailbreak_proudly_unveiling_the_tried_and/)
+            - [Dan 6.0](https://www.reddit.com/r/ChatGPT/comments/10vinun/presenting_dan_60/)
+            - [SDAN](https://www.reddit.com/r/ChatGPT/comments/10vlzbo/presenting_sdan_simple_dan/)
+        - [SQL analyst in 26 recursive prompts](https://www.patterns.app/blog/2023/01/18/crunchbot-sql-analyst-gpt/)
+            - [Hackernews](https://news.ycombinator.com/item?id=34521149)
+        - [Midjouney Prompt Engine 3](https://www.reddit.com/r/midjourney/comments/11chf6s/version_3_of_my_chatgpt_prompting_machine_it_now/)
+        - [stable diffusion prompter](https://www.reddit.com/r/StableDiffusion/comments/11cfe1i/is_there_a_chatgpt_prompt_to_create_sd_prompts/)
+        - [GPT4 Jailbreak](https://news.ycombinator.com/item?id=35190383)
+    - LLM Prompt Engeneering
+        - [Microsoft Prompt Engine](https://news.ycombinator.com/item?id=34811070) 
+    - [GPT Error Reduction](https://medium.com/@0xjfan/how-we-cut-the-rate-of-gpt-hallucinations-from-20-to-less-than-2-f3bfcc10e4ec) 
+    - [openai cookbook](https://github.com/openai/openai-cookbook)
+    - [openai prompt engeneering](https://learnprompting.org/docs/intro)
+- Data Processing
+    - [Pinecone long term vector memory](https://www.pinecone.io/)
+    - [Load Repo](https://github.com/mpoon/gpt-repository-loader)
+- API
+    - [ChatGPT official API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
+    - [ChatBlade](https://github.com/npiv/chatblade)
+    - [AI Chat](https://github.com/sigoden/aichat/)
+
+
+### Concrete Prompts
 
 <details>
 <summary>Table prompt GUI Interaction</summary>
