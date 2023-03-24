@@ -4,7 +4,7 @@ In this repository, we investigate different aspects and solution (ideas) to the
 
 ![Logo](attachments/logo.png)
 
-- [Problem](#Problem)
+- [Problem](#Problem)EB
 	- [Examples](#Examples)
 - [Goal](#Goal)
 - [Related Work](#related-work)
@@ -158,9 +158,10 @@ We collect interesting papers in the related areas of this work.
 ### Language Overview
 An overview of languages and tools connecting languages (e.g. transpiler, compiler).
 - [Programming Language Database](https://pldb.com/) (4000 languages) [Github](https://github.com/breck7/pldb)
+- [Langugage Definition Tool Ott](https://github.com/ott-lang/ott)
+- https://rosettacode.org/wiki/Language_Comparison_Table
 - [Landscape of languages](https://docs.google.com/spreadsheets/d/1P738jVhd9-UkNneIRN6VbEH-stDiKbDbB0WWPROv6lk/edit?usp=sharing) (compiler, transpiler overview, incomplete)
     - [Visualization](https://github.com/NeuralCoder3/language-map)
-- [Langugage Definition Tool Ott](https://github.com/ott-lang/ott)
 
 ### Program Equivalence
 An important part in the translation is the equivalence of the original and translated program.
@@ -192,7 +193,7 @@ The programs need to be equivalent and can be quite complex involving complicate
 However, the synthesis has a clear guideline as the shape of the original program can be used and the semantics of the result is fully defined. 
 
 - [CounterExample-Guided Inductive Synthesis (CEGIS)](https://www-cs.stanford.edu/~preiner/publications/2017/PreinerNiemetzBiere-TACAS17.pdf)
-- [Synthesis of Loop-free Programs](https://dl.acm.org/doi/pdf/10.1145/1993316.1993506)
+- [Synthesis of Loop-free Programs](https://dl.acm.org/doi/pdf/10.1145/1993316.1993506) (tool: Brahma)
 - [Program Synthesis](https://www.nowpublishers.com/article/Details/PGL-010)
 - Cyclic Program Synthesis
 - [Bottom-Up Synthesis of Recursive Functional Programs using Angelic Execution](https://dl.acm.org/doi/pdf/10.1145/3498682)
@@ -206,6 +207,9 @@ However, the synthesis has a clear guideline as the shape of the original progra
     - [Github](https://github.com/xiye17/torchASN)
 - [Synthesizing an Instruction Selection Rule Library from Semantic Specifications](https://pp.ipd.kit.edu/uploads/publikationen/buchwald18cgo.pdf)
 - [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
+- [Supersonic](https://dl.acm.org/doi/10.1145/3497776.3517769) [Github](https://github.com/HuantWang/SUPERSONIC) (based on CompilerGym)
+- https://emina.github.io/rosette/
+- [Untyped -> Typed](https://dl.acm.org/doi/abs/10.1145/1176617.1176755?casa_token=dFMn2xhiTeUAAAAA:EC0wkfDgt3clgpbnwQ1x2JasOiL9wOvZQ0HoxKdUNexgjpAznzLg4tpfJpfDyXp0MIYzBHeE58tS)
 
 [add from folder]
 
@@ -234,6 +238,9 @@ However, the current projects mainly look into natural language and do not estab
 - [GPT Error Reduction](https://medium.com/@0xjfan/how-we-cut-the-rate-of-gpt-hallucinations-from-20-to-less-than-2-f3bfcc10e4ec) 
 - [openai cookbook](https://github.com/openai/openai-cookbook)
 - [openai prompt engeneering](https://learnprompting.org/docs/intro)
+- [CompilerGym](https://arxiv.org/pdf/2109.08267.pdf) [Github](https://github.com/facebookresearch/CompilerGym)
+- fast-ai
+- https://github.com/salesforce/CodeGen
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
@@ -249,7 +256,11 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - [Pandoc](https://pandoc.org/)
 - Popular Media
     - [Legacy Code Conversion - Computerphile](https://www.youtube.com/watch?v=Xz06zYlQrck)
+- Protobuf -- the universal language
 - [Oblivious Decompiler](https://www.recon.cx/2012/schedule/attachments/40_Chernov-Troshina.pdf)
+- [How to write a Transpiler](https://tomassetti.me/how-to-write-a-transpiler/)
+- [universal transpiler](https://github.com/jarble/transpiler)
+    - [CodeWorker](http://codeworker.free.fr/)
 
 ### Related Concepts
 - Synthesis
@@ -327,8 +338,27 @@ We can group the ideas in the following categories:
 ## Applications
 
 Here, we collect (more) concrete ideas for applications of our approaches:
+* Code -> Rust (safety guarantees, checker environment)
+* functional -> imperative (possible speedup)
+* python <-> language (library support)
+* php -> typescript (update old infrastructure)
+* java -> typescript (update old infrastructure)
+* imaginary markup -> latex (better syntax)
+* toy language -> real language (fast protoyping)
+* imaginary api -> real api (accessibility, better adoption, change resistent code)
+* pseudocode -> language 
+* python -> C++ (speedup)
+* imperative -> functional (verification)
+* react <-> angular <-> vue (re-usage between apis)
+* use arbitrary [Language Gimmics](https://buttondown.email/hillelwayne/archive/microfeatures-id-like-to-see-in-more-languages/) => language extension (similar to OCaml ppx)
+* synthesis by natural language transpilation
+* [Dependabot 2.0](https://github.com/vlts1/ruzz): Adapt code to changes automatically
+
+Further high-level advantages:
+* not all code needs to be able to be converted
+* wrappers can be written according to semantics
+
+Mottos:
+* LLVM (lingua franca) for high-level
+* write code you want and get code you need
 * 
-
-
-
-
