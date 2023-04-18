@@ -172,6 +172,7 @@ This equivalence either guides the translation/synthesis or has to be establishe
 - [Interaction Trees](https://arxiv.org/pdf/1906.00046.pdf)
 - [Self-Supervised Learning to Prove Equivalence Between Straight-Line Programs via Rewrite Rules](https://arxiv.org/pdf/2109.10476.pdf)
 - CompCert
+- [Generating Proof Certificates for a Language-Agnostic Deductive Program Verifier](https://xchen.page/assets/pdf/LCT+23-paper.pdf)
 
 [add from folder]
 
@@ -261,6 +262,7 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - [How to write a Transpiler](https://tomassetti.me/how-to-write-a-transpiler/)
 - [universal transpiler](https://github.com/jarble/transpiler)
     - [CodeWorker](http://codeworker.free.fr/)
+- [User-Customizable Transpilation of Scripting Languages](https://arxiv.org/pdf/2301.11220.pdf)
 
 ### Related Concepts
 - Synthesis
