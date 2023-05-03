@@ -4,7 +4,7 @@ In this repository, we investigate different aspects and solution (ideas) to the
 
 ![Logo](attachments/logo.png)
 
-- [Problem](#Problem)EB
+- [Problem](#Problem)
 	- [Examples](#Examples)
 - [Goal](#Goal)
 - [Related Work](#related-work)
@@ -173,6 +173,9 @@ This equivalence either guides the translation/synthesis or has to be establishe
 - [Self-Supervised Learning to Prove Equivalence Between Straight-Line Programs via Rewrite Rules](https://arxiv.org/pdf/2109.10476.pdf)
 - CompCert
 - [Generating Proof Certificates for a Language-Agnostic Deductive Program Verifier](https://xchen.page/assets/pdf/LCT+23-paper.pdf)
+- [ARDiff: scaling program equivalence checking via iterative abstraction and refinement of common code](https://dl.acm.org/doi/10.1145/3368089.3409757)
+- [FuzzDiff: A Program Equivalence Checker based on feedback-directed fuzz testing and semantic analysis](https://www.scss.tcd.ie/publications/theses/diss/2022/TCD-SCSS-DISSERTATION-2022-134.pdf)
+- [Self-Supervised Learning to Prove Equivalence Between Straight-Line Programs via Rewrite Rules](https://arxiv.org/pdf/2109.10476.pdf)
 
 [add from folder]
 
@@ -211,6 +214,14 @@ However, the synthesis has a clear guideline as the shape of the original progra
 - [Supersonic](https://dl.acm.org/doi/10.1145/3497776.3517769) [Github](https://github.com/HuantWang/SUPERSONIC) (based on CompilerGym)
 - https://emina.github.io/rosette/
 - [Untyped -> Typed](https://dl.acm.org/doi/abs/10.1145/1176617.1176755?casa_token=dFMn2xhiTeUAAAAA:EC0wkfDgt3clgpbnwQ1x2JasOiL9wOvZQ0HoxKdUNexgjpAznzLg4tpfJpfDyXp0MIYzBHeE58tS)
+- LLM Forced Format
+    - [Jsonformer](https://news.ycombinator.com/item?id=35790092) [Github](https://github.com/1rgs/jsonformer)
+    - [clownfish](https://github.com/newhouseb/clownfish)
+    - [Output Fixing Parser](https://python.langchain.com/en/latest/modules/prompts/output_parsers/examples/output_fixing_parser.html)
+    - [Guardrails](https://github.com/ShreyaR/guardrails)
+- [Statistically certified approximate logic synthesis](https://ieeexplore.ieee.org/abstract/document/8203798?casa_token=x4a__CSWqaAAAAAA:Do9diuZVLhRFGh2v-tmwoaL4nEvNNqI3RkXBuoque2kGImJIb0WbMLve1bP2_jsIEURFES2QB5ZX)
+- [Certifying the Synthesis of Heap-Manipulating Programs](https://dl.acm.org/doi/pdf/10.1145/3473589) (SuSLik)
+- [A FRAMEWORK FOR CERTIFIED PROGRAM SYNTHESIS](https://ilyasergey.net/assets/pdf/papers/Watanabe-MComp.pdf)
 
 [add from folder]
 
@@ -242,6 +253,7 @@ However, the current projects mainly look into natural language and do not estab
 - [CompilerGym](https://arxiv.org/pdf/2109.08267.pdf) [Github](https://github.com/facebookresearch/CompilerGym)
 - fast-ai
 - https://github.com/salesforce/CodeGen
+- [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT) An experimental open-source attempt to make GPT-4 fully autonomous.
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
