@@ -211,6 +211,7 @@ However, the synthesis has a clear guideline as the shape of the original progra
     - [Github](https://github.com/xiye17/torchASN)
 - [Synthesizing an Instruction Selection Rule Library from Semantic Specifications](https://pp.ipd.kit.edu/uploads/publikationen/buchwald18cgo.pdf)
 - [Suoper: A Synthesizing Superoptimizer](https://arxiv.org/abs/1711.04422)
+- [Minotaur: A SIMD-Oriented Synthesizing Superoptimizer](https://arxiv.org/abs/2306.00229) (based on Alive)
 - [Supersonic](https://dl.acm.org/doi/10.1145/3497776.3517769) [Github](https://github.com/HuantWang/SUPERSONIC) (based on CompilerGym)
 - https://emina.github.io/rosette/
 - [Untyped -> Typed](https://dl.acm.org/doi/abs/10.1145/1176617.1176755?casa_token=dFMn2xhiTeUAAAAA:EC0wkfDgt3clgpbnwQ1x2JasOiL9wOvZQ0HoxKdUNexgjpAznzLg4tpfJpfDyXp0MIYzBHeE58tS)
@@ -254,6 +255,7 @@ However, the current projects mainly look into natural language and do not estab
 - fast-ai
 - https://github.com/salesforce/CodeGen
 - [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT) An experimental open-source attempt to make GPT-4 fully autonomous.
+- [Maieutic Prompting: Logically Consistent Reasoning with Recursive Explanations](https://arxiv.org/pdf/2205.11822.pdf)
 
 ### Transpilers
 Transpilers are mainly written by hand and are far from perfect.
@@ -275,6 +277,11 @@ However, there are often formal (or implicit) guarantees that the result agrees 
 - [universal transpiler](https://github.com/jarble/transpiler)
     - [CodeWorker](http://codeworker.free.fr/)
 - [User-Customizable Transpilation of Scripting Languages](https://arxiv.org/pdf/2301.11220.pdf)
+
+### Language Interoperability
+- [Melocoton: A Program Logic for Verified Interoperability Between OCaml and C](https://gallium.inria.fr/~agueneau/publis/melocoton.pdf)
+- [FFI Overhead Comparison](https://news.ycombinator.com/item?id=31376679)
+
 
 ### Related Concepts
 - Synthesis
@@ -300,6 +307,12 @@ However, there are often formal (or implicit) guarantees that the result agrees 
     - logarithmic types
     - fuzzing
     - specification mining
+- Program Communication
+    - Marshalling
+    - JSON
+    - Pickling
+    - RPC
+    - ABI/FFI
 
 
 ## Ideas
